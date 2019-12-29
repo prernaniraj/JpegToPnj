@@ -1,18 +1,12 @@
-arr = {"a","v","c"}
-print("*".join(arr))
+import sys
+import os
+# import Pillow
+# from PIL import Image
 
-def add(a,*b,**c):
-   for subject , mark in c.items():
-       print(subject)
+old_folder = sys.argv[1]
+new_folder = sys.argv[2]
 
-add(1,2,4,7,e=2,be=3)
-def hihgest_marksheet(marksheet):
-    for subject, marks in marksheet.items():
-        print(f"{subject}: {marks} ")
+print(old_folder,new_folder)
 
-hihgest_marksheet({'Hindi' : 98, "Marathi": 95, "Python" :100})
-# hihgest_marksheet.sorted(key)
-print(hihgest_marksheet)
-print(hihgest_marksheet("Hindi"))
-name = 'ABFJSKDF'
-print(name[len(name):5:-1])
+if not os._exists(new_folder):
+    os.mkdir(new_folder)
